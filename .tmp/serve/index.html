@@ -1,0 +1,80 @@
+<!doctype html>
+<html class="no-js" ng-app="website">
+  <head>
+    <meta charset="utf-8">
+    <title>Web Developer Toronto - Caroline Shaw</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link href='https://fonts.googleapis.com/css?family=Karla:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Unica+One|Vollkorn' rel='stylesheet' type='text/css'>
+    <base href="/">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+    <!-- <link rel="stylesheet" href="app/vendor.css"> -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="app/css.css">
+    <!-- endinject -->
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="wrapper">
+        <div class="main-col-1">
+            <div ng-include="'routes/main/header.html'"></div>
+        </div>
+        <div class="main-col-2">
+            <ng-view autoscroll="true"></ng-view>
+            <div ng-include="'routes/main/work.html'"></div>
+            <div ng-include="'routes/main/footer.html'"></div>
+        </div>
+    </div>
+    <!-- build:js(src) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../bower_components/angular-aria/angular-aria.js"></script>
+    <script src="../bower_components/angular-material/angular-material.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+    <!-- inject:js -->
+    <script src="app/app.js"></script>
+    <script src="routes/tiff-schedule/tiff-schedule.controller.js"></script>
+    <script src="routes/tiff-schedule/index.js"></script>
+    <script src="routes/tiff/tiff.controller.js"></script>
+    <script src="routes/tiff/index.js"></script>
+    <script src="routes/simple-therapy/simple-therapy.controller.js"></script>
+    <script src="routes/simple-therapy/index.js"></script>
+    <script src="routes/realsocial/realsocial.controller.js"></script>
+    <script src="routes/realsocial/index.js"></script>
+    <script src="routes/freshbooks/index.js"></script>
+    <script src="routes/freshbooks/freshbooks.controller.js"></script>
+    <script src="routes/panasonic/panasonic.controller.js"></script>
+    <script src="routes/panasonic/index.js"></script>
+    <script src="routes/main/main.controller.js"></script>
+    <script src="routes/cv/index.js"></script>
+    <script src="routes/cv/cv.controller.js"></script>
+    <script src="routes/colin-smith/index.js"></script>
+    <script src="routes/colin-smith/colin-smith.controller.js"></script>
+    <script src="app/svg.js"></script>
+    <script src="templateCacheHtml.js"></script>
+    <!-- endinject -->
+
+    <!-- inject:partials -->
+    <!-- angular templates will be automatically converted in js and inserted here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+  </body>
+</html>
