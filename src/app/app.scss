@@ -135,7 +135,7 @@ a{
 		float:left;
 	}
 	@include desktop{
-		width: 15%;
+		width: 20%;
 		float:left;
 	}
 }
@@ -149,7 +149,7 @@ a{
 		float:left;
 	}
 	@include desktop {
-		width: 75%;
+		width: 80%;
 		float:left;
 	}
 }
@@ -176,11 +176,25 @@ a{
 	.mobile{
 		width:20%;
 		float:left;
+		@include mobile{
+			width:auto;
+			float:none;
+			margin: 0 auto;
+		}
 	}
 	.desktop{
 		width:77%;
 		margin-right: 3%;
 		float:left;
+		@include mobile{
+			width: 100%;
+			margin:0;
+			float:none;
+		}
+	}
+	@include mobile{
+		margin-left: 0;
+		text-align: center;
 	}
 }
 
