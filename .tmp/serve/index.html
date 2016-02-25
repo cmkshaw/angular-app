@@ -31,12 +31,13 @@
         <div class="main-col-1">
             <div ng-include="'routes/main/header.html'"></div>
         </div>
-        <div class="main-col-2">
+        <div class="main-col-2 clearfix ">
             <ng-view autoscroll="true"></ng-view>
             <div ng-include="'routes/main/work.html'"></div>
-            <div ng-include="'routes/main/footer.html'"></div>
         </div>
     </div>
+    <div class="clearfix"></div>
+    <div class="clearfix" ng-include="'routes/main/footer.html'"></div>
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/angular/angular.js"></script>
@@ -61,10 +62,10 @@
     <script src="routes/panasonic/panasonic.controller.js"></script>
     <script src="routes/panasonic/index.js"></script>
     <script src="routes/main/main.controller.js"></script>
-    <script src="routes/cv/index.js"></script>
-    <script src="routes/cv/cv.controller.js"></script>
     <script src="routes/freshbooks/index.js"></script>
     <script src="routes/freshbooks/freshbooks.controller.js"></script>
+    <script src="routes/cv/index.js"></script>
+    <script src="routes/cv/cv.controller.js"></script>
     <script src="routes/colin-smith/index.js"></script>
     <script src="routes/colin-smith/colin-smith.controller.js"></script>
     <script src="app/svg.js"></script>

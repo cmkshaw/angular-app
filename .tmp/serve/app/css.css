@@ -176,6 +176,11 @@ a {
 .project p, .home p {
   max-width: 500px; }
 
+.footer {
+  text-align: center;
+  margin-top: 5%;
+  padding: 5% 0; }
+
 .project-tags {
   padding: 0; }
   .project-tags li {
