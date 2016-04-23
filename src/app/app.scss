@@ -1,4 +1,5 @@
 /* Media Queries Widths & Mixins */
+$mobile-sm-width: 480px;
 $mobile-width: 767px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
@@ -28,6 +29,12 @@ $font-type-body: 'Vollkorn', serif;
 * html .clearfix { height: 1%; }
 .clearfix { display: block; }
 /* close commented backslash hack */
+
+@mixin mobile-sm {
+  @media (max-width: #{$mobile-sm-width}) {
+    @content;
+  }
+}
 
 @mixin mobile {
   @media (max-width: #{$mobile-width}) {
@@ -106,6 +113,13 @@ a{
 	}
 	@include tablet{
 		max-width: 200px;
+	}
+}
+
+.hide-mobile{
+	display:block;
+	@include mobile{
+		display: none;
 	}
 }
 
@@ -198,31 +212,6 @@ a{
 	}
 }
 
-// .work{
-// 	clear:both;
-// 	&:before, &:after{
-// 		clear:both;
-// 		content: '';
-// 		display: block;
-// 	}
-// }
-
-// .work a{
-// 	float: left;
-// 	width: 32.3333333333333333%;
-// 	margin-right: 1%;
-// 	margin-bottom: .5%;
-// 	position: relative;
-// 	border: 0;
-
-// 	&:hover{
-// 		.work-item-caption{
-// 			opacity: 1;
-// 		}
-// 	}
-// }
-
-
 .logo{
 	text-align:center;
 }
@@ -260,8 +249,23 @@ a{
 .one-half{
 	width:46%;
 	margin-right:3%;
+	margin-left: 0;
 	margin-bottom: 3%;
 	float:left;
+
+	img{
+		max-width: 100%;
+	}
+
+	figcaption{
+		border-top: 1px solid #ddd;
+		padding-top:10px;
+		margin-top: 10px;
+		font-size:.9em;
+		font-style: italic;
+		text-align: right;
+		display: inline-block;
+	}
 
 	@include mobile {
 		width: 100%;
@@ -274,16 +278,23 @@ a{
 	width:30%;
 	margin-right:1%;
 	float:left;
+	border: 1px solid #ddd;
+	@include mobile-sm {
+		width: 100%;
+		float:none;
+		margin-right:0;
+		display: none;
+
+		&:nth-of-type(1){
+			display: block;
+		}
+	}
 }
 
 .footer{
 	text-align: center;
 	margin-top:5%;
 	padding:5% 0;
-}
-
-.project-intro{
-	//font-weight: $font-bold;
 }
 
 $tag-border-radius: 5px;
